@@ -16,5 +16,5 @@ Then you need to execute the 'ecom.sql' script in the PHPMyAdmin console of the 
 if you encounter an Error 404 by trying to access to the website loccally,
 create a virtualhost pointing to the path of your local project with the name 'localhost'.
 
-# OPTIONAL
+## OPTIONAL
 If you want to fill the db with fake data you can execute the "setDB.php" script independently of the project (faker library is needed)
