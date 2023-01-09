@@ -18,3 +18,9 @@ create a virtualhost pointing to the path of your local project with the name 'l
 
 ## OPTIONAL
 If you want to fill the db with fake data you can execute the "setDB.php" script independently of the project (faker library is needed)
+
+Here is the link to the original repository:
+
+```
+https://github.com/Spikesito/e-com-php/tree/emileV2
+```
