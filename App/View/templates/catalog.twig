@@ -1,0 +1,28 @@
+{% extends "layout.twig" %}
+{% block head %}
+	<title>
+		Catalog Snokers
+	</title>
+	{# <link href="{{asset('../static/catalog.css') }}" rel="stylesheet"> #}
+{% endblock %}
+
+
+{% block header %}
+	<div class="login"></div>
+{% endblock %}
+
+{% block content %}
+	<h1>
+		Catalog section !
+	</h1>
+	<br>
+	<br>
+	<div id="product-container">
+		{% for p in products %}
+			<div class="product-card" onclick="document.location.href='/detail/{{p.ProductId}}'">
+				<img src="https://picsum.photos/200/200"></img>
+			<p>{{ p.ProductName }}</p>
+		</div>
+	{% endfor %}
+</div>
+{% endblock %}

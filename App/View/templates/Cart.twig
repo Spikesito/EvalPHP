@@ -1,0 +1,51 @@
+{% extends "layout.twig" %}
+
+{% block head %}
+	<title>
+		Cart
+	</title>
+{% endblock %}
+
+{% block content %}
+	<div id="container">
+		<h1>
+			Cart Section
+		</h1>
+		<h2>Order Summary</h2>
+		<div id="global-edition">
+			<h3>Product</h3>
+			<h3>Price</h3>
+			<h3>Quantity</h3>
+			{% for c in content %}
+				<a href="/detail/{{c.ProductId}}">{{ c.ProductName }}</a>
+				<p>{{ c.Price }}$</p>
+				<form method="POST" action="/cart">
+					<p>1
+						<button name="deletePId" value={{c.ProductId}} href="/delete">Delete</button>
+					</p>
+				</form>
+			{% endfor %}
+		</div>
+		<br>
+		<h3>Total:
+			{{total}}
+			$</h3>
+		<a href="/payment"><button>Proceed to payment</button></a>
+	</div>
+	<style>
+		#global-edition {
+			width: 50%;
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			justify-content: center;
+			align-items: center
+		}
+
+		#container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center
+		}
+	</style>
+{% endblock %}

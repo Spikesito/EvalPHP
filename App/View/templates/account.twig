@@ -1,0 +1,47 @@
+{% extends "layout.twig" %}
+
+{% block head %}
+	<title>
+		Account
+	</title>
+{% endblock %}
+
+{% block status %}
+	{{status}}
+{% endblock %}
+
+{% block content %}
+	<h2>Account Page</h2>
+	<div id="global-edition">
+		<form method="POST" action="/account">
+			<div id="edit-zone">
+				<h3>Edit Personal info</h3>
+				<input name="UserId" style="display:none" value={{data.UserId}} >
+				<h4>First Name:</h4>
+				<input name="FirstName" value={{data.FirstName}}>
+				<p>Last Name:</p>
+				<input name="LastName" value={{data.LastName}}>
+				<p>Email:</p>
+				<input name="Email" value={{data.Email}}>
+				<p>Birthdate:</p>
+				<input name="Birthdate" value={{data.Birthdate}}>
+				<p>Password:</p>
+				<input name="Password" placeholder="Djbril##{[|`\^\12`|[{Soussana">
+				<p>Confirm Password:</p>
+				<input name="Password2" placeholder="Djbril##{[|`\^\12`|[{Soussana">
+				<br><button>Save</button>
+			</div>
+		</form>
+	
+	</div>
+	<style>
+		#edit-zone {}
+		#global-edition {
+			display: flex;
+			justify-content: center;
+			align-items: center
+		}
+	</style>
+
+
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.twig" %}
+
+{% block head %}
+	<title>
+		Register
+	</title>
+{% endblock %}
+
+{% block status %}
+	{{status}}
+{% endblock %}
+
+{% block content %}
+	<h1>{{status}}</h1>
+	{% if connected == 1 %}
+		<h1>Connected</h1>
+	{% endif %}
+
+	<h1>
+		Welcome Home
+	</h1>
+	<form method="POST" action="/register">
+		<input placeholder="FirstName" name="FirstName" value=""></input>
+		<input placeholder="LastName" name="LastName" value=""></input>
+		<input type="email" placeholder="Email" name="Email" value=""></input>
+		<input placeholder="Password" name="Password" value=""></input>
+		<input placeholder="Password2" name="Password2" value=""></input>
+		<input placeholder="DD-MM-YYYY" name="BirthDate" value=""></input>
+		<button>Register</button>
+	</form>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "layout.twig" %}
+
+{% block head %}
+	<title>
+		Detail
+	</title>
+{% endblock %}
+
+
+{# {% block connected %}
+<p>Ici ya du contenu qui peut bouger</p>
+{% endblock %} #}
+{% block content %}
+	<img src="https://picsum.photos/200/200"></img>
+
+<h1>
+	{{p.ProductName}}
+</h1>
+<h2>
+	Id:
+	{{p.ProductId}}
+	Category:
+	{{p.Category}}
+</h2>
+<h2>
+	Price :
+	{{p.Price}}
+	$
+	<br><br>
+	Description:</h2>
+<p>{{p.Description}}</p>
+{# <div id="product-container"></div> #}
+
+{% if connected != 1 %}
+<p>Please login for add to cart</p>
+{% else %}
+<form method="POST" action="/cart" >
+<input name="pId" style="display:none" value={{p.ProductId}}></input>
+<button>Add to cart</button>
+</form>
+{% endif %}
+{% endblock %}

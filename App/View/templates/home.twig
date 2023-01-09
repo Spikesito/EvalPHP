@@ -1,0 +1,38 @@
+{% extends "layout.twig" %}
+{% block head %}
+	<title>
+		Home Snokers
+	</title>
+	{# <link rel="stylesheet" href="../static/home.css"> #}
+{% endblock %}
+
+
+
+{% block content %}
+	<h1>
+		Home section !
+	</h1>
+	<br>{{test}}
+	<br>
+	<div id="product-container"></div>
+	<style>
+		#product-container {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			column-gap: 50px;
+			row-gap: 20px;
+			grid-auto-rows: minmax(100px, auto);
+			margin: 50px
+		}
+		.product-card {
+			background-color: white;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.product-card:hover {
+			background-color: #e3e3e3
+		}
+	</style>
+{% endblock %}

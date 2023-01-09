@@ -1,0 +1,18 @@
+#product-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    margin: 50px
+}
+.product-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.product-card:hover {
+    background-color: #e3e3e3
+}

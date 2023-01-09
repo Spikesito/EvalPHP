@@ -1,0 +1,37 @@
+{% extends "layout.twig" %}
+
+{% block head %}
+	<title>
+		Login
+	</title>
+{% endblock %}
+
+
+{# {% block connected %}
+<p>Ici ya du contenu qui peut bouger</p>
+{% endblock %} #}
+{% block content %}
+	<h1>{{status}}</h1>
+	<h1>
+		Login Page
+	</h1>
+	<form method="POST" action="/login">
+		<input placeholder="email" name="Email" value=""></input>
+		<input placeholder="password" name="Password" value=""></input>
+        <button>Login</button>
+</form>
+{% endblock %}{# <!DOCTYPE html>
+			<html lang="en">
+				<head>
+					<meta charset="UTF-8">
+					<meta http-equiv="X-UA-Compatible" content="IE=edge">
+					<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					<title>Document</title>
+				</head>
+				<body>
+					<div>
+						{{data.title}}
+						<p>Juibo ?{{data.juibo}}</p>
+					</div>
+				</body>
+			</html> #}

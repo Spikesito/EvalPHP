@@ -1,0 +1,19 @@
+{
+    "name": "ye/e-com-php",
+    "type": "project",
+    "require": {
+        "twig/twig": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "App\\": "App/"
+        }
+    },
+    "authors": [
+        {
+            "name": "WSAIOUDI",
+            "email": "wassim.saioudi@ynov.com"
+        }
+    ]
+}
